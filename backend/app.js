@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import 'dotenv/config'
 import { readUsers } from "./crud-read.js";
 import { createUser } from "./crud-create.js";
 import { deleteUser } from "./crud-delete.js";
@@ -76,7 +77,9 @@ app.delete("/employees/:id", async (req, res) => {
     });
   }
 });
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+console.log("환경변수 : ", process.env.NODE_ENV);
+if(process.env.NODE_ENV === 'development') {
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);
+  });
+}
