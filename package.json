@@ -1,0 +1,19 @@
+{
+  "name": "hanul-erp",
+  "version": "1.0.0",
+  "description": "hanul erp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "dependencies": {
+    "backend": "^1.0.0"
+  },
+  "devDependencies": {}
+}
