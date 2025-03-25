@@ -1,5 +1,4 @@
-{ "version": 2, "rewrites": [
-  {
-    "source": "/employees",
-    "destination": "/employees"
-  }] }
+{
+  "version": 2,
+  "rewrites": [{ "source": "api/:path*", "destination": "https://hanul-erp-backend.vercel.app/api" }]
+}
