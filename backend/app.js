@@ -6,7 +6,7 @@ import { createUser } from "./crud-create.js";
 import { deleteUser } from "./crud-delete.js";
 import { updateUser } from "./crud-update.js";
 const app = express();
-const port = 3001;
+const port = 3000;
 // Built-in Middleware : 요청-응답 사이에 실행되는 특별한 함수
 app.use(express.json()); // axios가 JSON으로 보내온 JSON 데이터를 인식 처리
 app.use(express.urlencoded({ extended: true })); // axios가 JSON으로 보내온 폼 데이터를 인식 처리
@@ -78,7 +78,7 @@ app.delete("/employees/:id", async (req, res) => {
   }
 });
 console.log("환경변수 : ", process.env.NODE_ENV);
-if(process.env.NODE_ENV === 'development') {
+if(process.env.NODE_ENV === 'production') {
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
   });
