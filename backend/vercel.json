@@ -1,7 +1,4 @@
-{ "version": 2, "rewrites": [{
-    "source": "/employees/:path*",
-    "destination": "/employees/:path*"
-  },
+{ "version": 2, "rewrites": [
   {
     "source": "/employees",
     "destination": "/employees"
