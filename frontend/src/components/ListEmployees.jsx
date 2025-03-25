@@ -9,7 +9,7 @@ function ListEmployees() {
   const [isModalShow, setIsModalShow] = useState(false);
   const [editEmployee, setEditEmployee] = useState(null)
   const getEmployees = async () => {
-    const data = await axios.get('/api/employees');
+    const data = await axios.get('https://hanul-erp-backend.vercel.app/api/employees');
     // fetch() : json parse 직접 ==> response.json() 호출
     // axios() : json 자동으로 parse ==> state에 바로 담으면 됨
     // console.log(data);
