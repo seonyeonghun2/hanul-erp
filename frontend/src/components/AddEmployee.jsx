@@ -27,7 +27,7 @@ function AddEmployee() {
   };
   const addEmployee = async () => {
     await axios
-      .post('http://localhost:3000/employees', {
+      .post('/employees', {
         employee_id: formData.id,
         first_name: formData.firstname,
         last_name: formData.lastname,
