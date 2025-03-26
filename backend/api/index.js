@@ -1,5 +1,15 @@
 import { MongoClient } from "mongodb";
 export default async function handler(req, res) {
+  // single Node.js Serverless Functions CORS 처리
+  res.setHeader('Access-Control-Allow-Credentials', true)
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  // another common pattern
+  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  )
   // 몽고db 클라이언트 URI
   const client = new MongoClient(process.env.MONGODB_URI);
   // 몽고DB 클라이언트 연결 수립
