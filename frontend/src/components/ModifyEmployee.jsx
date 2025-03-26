@@ -36,7 +36,7 @@ function ModifyExmployee({editEmployee, setIsModalShow}) {
   };
   const updateEmployee = async () => {
     await axios
-      .put(`/employees/${formData._id}`, {
+      .put(`https://hanul-erp-backend.vercel.app/api/${formData._id}`, {
         employee_id: formData.id,
         first_name: formData.firstname,
         last_name: formData.lastname,
