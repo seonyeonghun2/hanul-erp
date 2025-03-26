@@ -9,7 +9,7 @@ function ListEmployees() {
   const [isModalShow, setIsModalShow] = useState(false);
   const [editEmployee, setEditEmployee] = useState(null)
   const getEmployees = async () => {
-    const data = await axios.get('/employees');
+    const data = await axios.get('https://hanul-erp-backend.vercel.app/api');
     // fetch() : json parse 직접 ==> response.json() 호출
     // axios() : json 자동으로 parse ==> state에 바로 담으면 됨
     // console.log(data);
@@ -26,7 +26,7 @@ function ListEmployees() {
     const targetId = e.currentTarget.dataset.empId;
     if (confirm('정말로, 삭제하시겠습니까?')) {
       await axios
-        .delete(`/employees/${targetId}`)
+        .delete(`https://hanul-erp-backend.vercel.app/api/${targetId}`)
         .then((response) => console.log(response))
         .catch((e) => console.log(e));
     }
