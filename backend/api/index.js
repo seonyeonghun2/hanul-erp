@@ -31,7 +31,7 @@ export default async function handler(req, res) {
         res.status(200).json(result);
         break;
       default:
-        res.setHeader('Allow', ['GET','POST','PUT','DELETE']);
+        res.setHeader('Allow', ['GET','POST']);
         res.status(405).end(`${req.method}는 허용되지 않습니다!`)
     }
   } catch (e) {
