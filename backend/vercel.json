@@ -4,6 +4,10 @@
     {
       "source": "/employees",
       "destination": "https://hanul-erp-backend.vercel.app/api"
+    },
+    {
+      "source": "/employees/:id",
+      "destination": "https://hanul-erp-backend.vercel.app/api/:id"
     }
   ]
 }
